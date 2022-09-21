@@ -30,4 +30,8 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is your name"), containsString("MyTeam"));
     }
 
+    public void dumplingdefinition() throws Exception {
+        assertThat(queryProcessor.process("dumpling"), containsString("fat"));
+    }
+
 }
