@@ -39,4 +39,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 3 plus 9"), containsString("12"));
     }
 
+    @Test
+    public void large() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 116, 55, 94, 259"), containsString("259"));
+    }
+
 }

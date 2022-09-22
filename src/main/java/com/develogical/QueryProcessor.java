@@ -30,8 +30,13 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("largest")) {
             String[] parts = query.split(" ");
+            for (int i = 8; i < parts.length - 1; i++) {
+                parts[i] = parts[i].substring(0, (parts[i].length()-1));
+                System.out.println(parts[i]);
+            }
             int res = Integer.parseInt(parts[8]);
             for (int i = 9; i < parts.length; i++) {
+                
                 if (Integer.parseInt(parts[i]) > res) {
                     res = Integer.parseInt(parts[i]);
                 }
