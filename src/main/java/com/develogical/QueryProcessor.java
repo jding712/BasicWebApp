@@ -28,6 +28,13 @@ public class QueryProcessor {
             return Integer.toString(num1+num2);
         }
 
+        if (query.toLowerCase().contains("minus")) {
+            String[] parts = query.split(" ");
+            int num1 = Integer.parseInt(parts[2]);
+            int num2 = Integer.parseInt(parts[4]); 
+            return Integer.toString(num1-num2);
+        }
+
         if (query.toLowerCase().contains("largest")) {
             String[] parts = query.split(" ");
             for (int i = 8; i < parts.length - 1; i++) {
