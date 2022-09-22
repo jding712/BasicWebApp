@@ -14,6 +14,12 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("dumpling")) {
             return "a small, fat person.";
         } 
+        if (query.toLowerCase().contains("test")) {
+            return "";
+        }
+        if (query.toLowerCase().contains("what is your name")) {
+            return "dancing-dumpling";
+        }
         return "";
     }
 }
