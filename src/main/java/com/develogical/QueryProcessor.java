@@ -27,6 +27,18 @@ public class QueryProcessor {
             int num2 = Integer.parseInt(parts[4]); 
             return Integer.toString(num1+num2);
         }
+
+        if (query.toLowerCase().contains("largest")) {
+            String[] parts = query.split(" ");
+            int res = Integer.parseInt(parts[8]);
+            for (int i = 9; i < parts.length; i++) {
+                if (Integer.parseInt(parts[i]) > res) {
+                    res = Integer.parseInt(parts[i]);
+                }
+            }
+
+            return Integer.toString(res);
+        }
         
         return "";
     }

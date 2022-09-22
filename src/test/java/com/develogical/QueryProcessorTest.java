@@ -34,5 +34,9 @@ public class QueryProcessorTest {
     public void dumplingdefinition() throws Exception {
         assertThat(queryProcessor.process("dumpling"), containsString("fat"));
     }
+    @Test
+    public void add3to9() throws Exception {
+        assertThat(queryProcessor.process("what is 3 plus 9"), containsString("12"));
+    }
 
 }
