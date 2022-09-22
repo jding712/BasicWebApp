@@ -8,6 +8,9 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
+        if (query.toLowerCase().contains("what is your name")) {
+            return "dancing_dumpling";
+        }
         if (query.toLowerCase().contains("name")) {
             return "MyTeam";
         }
@@ -17,9 +20,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("test")) {
             return "";
         }
-        if (query.toLowerCase().contains("what is your name")) {
-            return "dancing_dumpling";
-        }
+        
         return "";
     }
 }
