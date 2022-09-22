@@ -20,6 +20,13 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("test")) {
             return "";
         }
+
+        if (query.toLowerCase().contains("plus")) {
+            String[] parts = query.split(" ");
+            int num1 = Integer.parseInt(parts[2]);
+            int num2 = Integer.parseInt(parts[4]); 
+            return Integer.toString(num1+num2);
+        }
         
         return "";
     }
