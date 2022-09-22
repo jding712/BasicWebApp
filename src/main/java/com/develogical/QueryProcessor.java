@@ -18,7 +18,7 @@ public class QueryProcessor {
             return "";
         }
         if (query.toLowerCase().contains("what is your name")) {
-            return "dancing-dumpling";
+            return "dancing_dumpling";
         }
         return "";
     }
